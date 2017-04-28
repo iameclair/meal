@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="1200.0" maxWidth="1200.0" minHeight="700.0" minWidth="900.0" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.le.school.meal.MainController">
+    <children>
+      <Pane id="topPanel" layoutX="-5.0" layoutY="-5.0" styleClass="toppanel" stylesheets="@style.css">
+         <children>
+              <Label layoutX="9.0" layoutY="1.0" minWidth="900.0" prefHeight="32.0" prefWidth="559.0" text="Free School Meals - Primary Schools" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+        <Separator layoutY="27.0" prefHeight="11.0" prefWidth="900.0" />
+        <TextField fx:id="showFileTextView" editable="false" layoutX="23.0" layoutY="47.0" prefHeight="25.0" prefWidth="742.0" promptText="import excel files here" />
+        <Button fx:id="browseBtn" layoutX="778.0" layoutY="47.0" mnemonicParsing="false" onAction="#browseFiles" prefHeight="25.0" prefWidth="90.0" text="Browse" />
+        <Label layoutX="25.0" layoutY="105.0" text="Pupil Number">
+         <font>
+            <Font name="Britannic Bold" size="14.0" />
+         </font></Label>
+        <TextField fx:id="queryBox" layoutX="25.0" layoutY="140.0" onAction="#queryData" promptText="number of pupils" />
+        <Button fx:id="queryBtn" layoutX="222.0" layoutY="140.0" mnemonicParsing="false" onAction="#queryData" prefHeight="25.0" prefWidth="90.0" text="Get Results" />
+        <Label layoutX="25.0" layoutY="186.0" prefHeight="25.0" prefWidth="376.0" text="Pupils eligible for Free School Meals " textOverrun="CLIP">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+        <ScrollPane layoutX="25.0" layoutY="221.0" prefHeight="460.0" prefWidth="850.0">
+         <content>
+            <TableView fx:id="tableView" onSort="#browseFiles" prefHeight="444.0" prefWidth="854.0">
+              <columns>
+                <TableColumn fx:id="monthColumn" prefWidth="162.0" text="Month" />
+                  <TableColumn fx:id="nameColumn" prefWidth="417.0" text="School " />
+                <TableColumn fx:id="nPupilsColumn" prefWidth="101.0" text="No of pupils" />
+                  <TableColumn fx:id="noEligible" prefWidth="167.0" text="No eligible for free meals" />
+              </columns>
+            </TableView>
+         </content></ScrollPane>
+      <ScrollPane layoutX="350.0" layoutY="83.0" prefHeight="127.0" prefWidth="523.0">
+         <content>
+            <ListView fx:id="listView" prefHeight="125.0" prefWidth="521.0" />
+         </content></ScrollPane>
+    </children>
+</Pane>

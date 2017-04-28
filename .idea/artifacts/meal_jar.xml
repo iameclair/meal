@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="meal:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/meal_jar</output-path>
+    <root id="archive" name="meal.jar">
+      <element id="module-output" name="meal" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/commons-collections4-4.1/commons-collections4-4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/poi-3.15/poi-3.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/poi-3.15/ooxml-lib/xmlbeans-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/poi-3.15/poi-ooxml-3.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/poi-3.15/poi-ooxml-schemas-3.15.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
